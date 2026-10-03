@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Print do YouTube em HD</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 280px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0f0f0f;
+      color: #f1f1f1;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #272727;
+      padding-bottom: 12px;
+    }
+    .logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 11px;
+      color: #aaaaaa;
+    }
+    .badge {
+      display: inline-block;
+      background: #ff0033;
+      color: #fff;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+    .card {
+      background: #1e1e1e;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #cccccc;
+    }
+    .card strong {
+      color: #ffffff;
+    }
+    .shortcut {
+      display: inline-block;
+      background: #333333;
+      color: #ff4e45;
+      font-family: monospace;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+    .btn-action {
+      width: 100%;
+      background: #ff0033;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .btn-action:hover {
+      background: #cc0029;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 11px;
+      color: #717171;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon48.png" alt="Logo" class="logo">
+    <div>
+      <div class="title">Print do YouTube</div>
+      <div class="subtitle">Captura em Resolução Real</div>
+      <span class="badge">HD / 4K</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <p>🎬 <strong>Como usar:</strong></p>
+    <p>Abra qualquer vídeo e clique no botão de câmera na barra de controles do player.</p>
+    <div style="margin-top: 6px;">
+      Ou aperte o atalho: <br>
+      <span class="shortcut">Shift + S</span>
+    </div>
+  </div>
+
+  <button id="openYouTubeBtn" class="btn-action">
+    <span>Abrir YouTube</span>
+  </button>
+
+  <div class="footer">
+    Sem marcas d'água • Imagem pura em PNG
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

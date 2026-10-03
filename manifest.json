@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Print do YouTube - Capturar Foto e Imagem em HD",
+  "version": "1.0.0",
+  "description": "Tire prints e salve fotos de qualquer vídeo do YouTube em alta resolução (1080p, 4K) com 1 clique, sem a barra de controle.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Print do YouTube em HD",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ]
+}

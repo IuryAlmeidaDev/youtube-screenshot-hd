@@ -1,0 +1,75 @@
+/* Estilos do Botão da Extensão no Player do YouTube */
+.ytp-hd-screenshot-btn {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.ytp-hd-screenshot-btn:hover {
+  opacity: 1 !important;
+  transform: scale(1.08);
+}
+
+.ytp-hd-screenshot-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  pointer-events: none;
+}
+
+/* Efeito de Flash (Obturador de Câmera) ao tirar o print */
+.yt-screenshot-flash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
+}
+
+/* Toast de Notificação Bonito */
+.yt-screenshot-toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(18, 18, 18, 0.92);
+  color: #ffffff;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.yt-screenshot-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.yt-screenshot-badge {
+  background: #ff0033;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
